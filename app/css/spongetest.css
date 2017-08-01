@@ -189,13 +189,6 @@ pre {
 strong {
   font-weight: 500;
 }
-comic {
-  font-family: "Comic Sans MS", monospace;
-  font-size: 0.9em;
-}
-calibri {
-  font-family: "Calibri", monospace;
-}
 
 /**
  * Styles to make the boxes actually visible to start
