@@ -59,7 +59,7 @@
 <!-- Task item Handlebars template -->
 <script id="task-template" type="text/x-handlebars-template">
   {{#each test}}
-  <h4 class="no-bottom-padding">{{title}}</h4>
+  <h4 class="no-bottom-padding">{{{title}}}</h4>
   {{#each tasks}}
   <article>
     <h5 class="no-bottom-padding">{{#if stars}}<span class="difficulty">{{{difficulty stars}}}</span>{{/if}}{{title}}</h5>
@@ -72,7 +72,7 @@
 
 <!-- Main content Handlebars template -->
 <script id="content-template" type="text/x-handlebars-template">
-  <h2>{{title}}</h2>
+  <h2>{{{title}}}</h2>
   {{{body}}}
   {{#with task}}
     <h3>Boxes test</h3>

@@ -158,9 +158,12 @@ h6 {
 }
 
 p,
-ul,
+ul{
+  font-size: 1.5em;
+}
 ol {
   font-size: 1.5em;
+  margin-bottom: 0;
 }
 
   p code,
@@ -185,6 +188,13 @@ pre {
 
 strong {
   font-weight: 500;
+}
+comic {
+  font-family: "Comic Sans MS", monospace;
+  font-size: 0.9em;
+}
+calibri {
+  font-family: "Calibri", monospace;
 }
 
 /**
