@@ -85,7 +85,20 @@ jQuery(
 						return strHTMLStarsOut;
 					}
 			);
+			/**
+			 * About me Tabs
+			 */
+			 $('div.tab button').click(function(){
+				 var tabName = $(this).attr('name');
 
+				 //deselect all tabs first
+				 $('div.tab button').removeClass('selected');
+				 $('.tabcontent').removeClass('selected');
+
+				 //then select clicked tab
+				 $(this).addClass('selected');
+				 $("#"+tabName).addClass('selected');
+			 })
 			/**
 			 * When the content file is ready, actually populate the content
 			 */

@@ -27,7 +27,28 @@
 </div>
 <div class="grid-container">
   <section class="grid-50">
-    <!-- INSERT YOUR "ABOUT ME" SECTION HERE -->
+    <div class="tab">
+      <button class="tabbutton selected" name="aboutme">About me</button>
+      <button class="tabbutton" name="photo">Photo</button>
+      <button class="tabbutton" name="links">Links</button>
+    </div>
+    <div id="aboutme" class="tabcontent selected">
+      <p>Hey there! My name is Najim. I'm a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidently, a software developer. I am currently a Computer Science student at Plymouth University going onto my third year. I'm desperately looking to gain valuable experience in the industry.</p>
+    </div>
+    <div id="photo" class="tabcontent">
+      <p>Just look at this handsome face! If this doesn't make you want to hire me then what will? :P</p>
+      <img src="resources/najim-avatar.jpg" width="300" height="300">
+    </div>
+    <div id="links" class="tabcontent">
+      <p>Here are some projects that I've worked on:</p>
+      <ul>
+        <li><a href="https://github.com/iDanScott/UniSystems">UniSystems - A vehicle loan management software package.</a><p>UniSystems provides cars to its staff for business use. Some cars are allocated to specific staff members on a long-term basis and some are kept in a pool for ad hoc use. This software package follows the MVC, Strategy, Observer and Command design patterns.</p></li>
+        <li><a href="https://nmazidi.github.io/Ant-Colony-CSharp">AntColony - Simulation of the behavior of ants in a colony.</a><p>Simulation of the movements, actions and communication of a number of n ants and m robber ants. The program is built to mimic the actions of ants in real life in order to help the user gain a better understanding of the way ants forage for food.</p></li>
+        <li><a href="https://github.com/nmazidi/AI-Chess">Chess - A chess games where human plays against computer.</a><p>This is a JavaScript implementation of a simple chess game where the player can play against the computer. I used a MinMax algorithm which enables the computer to make the best move possible for a certain position againts the player.</p></li>
+        <li><p>You can see my other projects on my <a href="https://github.com/nmazidi/">GitHub</a>.</p></li>
+        <li><p>Also check out my LinkedIn profile <a href="https://www.linkedin.com/in/najim-mazidi-493208116/">here</a>.</p></li>
+      </ul>
+    </div>
     <article id="content"></article>
     <noscript>
       <h1>You must enable JavaScript in order to view this page.</h1>

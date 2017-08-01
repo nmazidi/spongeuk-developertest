@@ -21,7 +21,6 @@
 
 body {
   min-width: 320px;
-
   font-family: "Roboto", serif;
   color: #212D35;
   font-weight: 300;
@@ -59,7 +58,7 @@ body {
   }
 
 #content {
-  padding-top: 30px;
+  padding-top: 10px;
   padding-bottom: 30px;
 }
 
@@ -203,4 +202,31 @@ strong {
 
 #box-right {
   height: 50px;
+}
+/**
+ * Styles for tabs section
+ */
+div.tab {
+  margin: 0px;
+	padding-top: 20px;
+  overflow: hidden;
+}
+div.tab button {
+  float: left;
+  border: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  color: #F9423A;
+  font-size: 1.5em;
+}
+.tabcontent {
+  display: none;
+	background: #F0F0F0;
+	padding: 15px;
+}
+div.tab button.selected {
+  background-color: #F0F0F0;
+}
+.tabcontent.selected{
+		display: inherit;
 }
