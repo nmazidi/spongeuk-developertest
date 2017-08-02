@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto:300,300i,500,500i";
+/*
+ =====================================================
+
+   _____                                _    _ _  __
+  / ____|                              | |  | | |/ /
+ | (___  _ __   ___  _ __   __ _  ___  | |  | | ' /
+  \___ \| '_ \ / _ \| '_ \ / _` |/ _ \ | |  | |  <
+  ____) | |_) | (_) | | | | (_| |  __/ | |__| | . \
+ |_____/| .__/ \___/|_| |_|\__, |\___|  \____/|_|\_\
+        | |                 __/ |
+        |_|                |___/
+
+=====================================================
+ SPONGE UK DEVELOPER TEST
+ Main LESS
+=====================================================
+*/
+
+/**
+* All colour and font variables
+*/
+@body_font_colour: #212D35;
+@white: #FFF;
+@header_bg: #F9423A;
+@titles: #F9423A;
+@stars: #FFB400;
+@star_border: #7E7772;
+@tasks_bg: #F2F2F2;
+@footer_bg: #212D35;
+@code_bg: #D4D4D4;
+@selected_tab_bg: #F0F0F0;
+
+@robotoSerif: "Roboto", serif;
+@robotoMono: "Roboto Mono", monospace;
+
+body {
+	min-width: 320px;
+	font-family: @robotoSerif;
+	color: @body_font_colour;
+	font-weight: 300;
+}
+#header-wrapper {
+	position: relative;
+	background: @header_bg;
+	z-index: 2;
+}
+#header {
+	padding-top: 60px;
+	padding-bottom: 45px;
+	color: @white;
+	img {
+		margin-right: auto;
+		margin-bottom: 30px;
+		margin-left: auto;
+		display: block;
+	}
+	h1 {
+		color: @white;
+		&+p {
+			font-size: 1.8em;
+		}
+	}
+}
+#content {
+	padding-top: 10px;
+	padding-bottom: 30px;
+	img {
+		width: 100%;
+	}
+}
+#tasks {
+	padding-top: 30px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+	padding-left: 20px;
+	position: relative;
+	background-color: @tasks_bg;
+	counter-reset: tasks;
+	z-index: 1;
+	article {
+		counter-increment: tasks;
+		h5 {
+			color: @titles;
+			&::before {
+				min-width: 0.75em;
+				padding-right: 0.5em;
+				display: inline-block;
+				color: @body_font_colour;
+				font-weight: 300;
+				vertical-align: text-bottom;
+				content: counter(tasks) ".";
+			}
+			.difficulty {
+				margin-left: 1.5em;
+				display: inline-block;
+				float: right;
+				color: @stars;
+				font-size: 0.8em;
+				white-space: nowrap;
+				.fa {
+					margin-left: 0.1em;
+				}
+				.fa-star-o {
+					color: @star_border;
+				}
+			}
+		}
+	}
+}
+#footer-wrapper {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	position: relative;
+	color: @white;
+	background-color: @footer_bg;
+	z-index: 2;
+}
+#footer {
+	a {
+		color: inherit;
+	}
+}
+h1 {
+	font-weight: 300;
+}
+h2 {
+	font-weight: 300;
+	color: @titles;
+}
+h3 {
+	font-weight: 300;
+	color: @titles;
+}
+h4 {
+	font-weight: 300;
+	color: @titles;
+}
+h5 {
+	font-weight: 300;
+	color: @titles;
+}
+h6 {
+	font-weight: 300;
+	color: @titles;
+}
+p {
+	font-size: 1.5em;
+	code {
+		padding-right: 0.2em;
+		padding-left: 0.2em;
+		line-height: 1.35;
+		vertical-align: baseline;
+		font-size: 0.9em;
+		background-color: @code_bg;
+		outline: none;
+	}
+}
+ul {
+	font-size: 1.5em;
+}
+ol {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+li {
+	code {
+		padding-right: 0.2em;
+		padding-left: 0.2em;
+		line-height: 1.35;
+		vertical-align: baseline;
+		font-size: 0.9em;
+		background-color: @code_bg;
+		outline: none;
+	}
+}
+code {
+	font-family: @robotoMono;
+	font-weight: 300;
+}
+pre {
+	font-family: @robotoMono;
+	font-weight: 300;
+}
+strong {
+	font-weight: 500;
+}
+#boxes {
+	padding: 40px;
+}
+#box-left {
+	height: 50px;
+}
+#box-right {
+	height: 50px;
+}
+div.tab {
+	margin: 0px;
+	padding-top: 20px;
+	overflow: hidden;
+	button {
+		float: left;
+		border: none;
+		padding: 14px 16px;
+		background-color: inherit;;
+		color: @titles;
+		font-size: 1.5em;
+	}
+	button.selected {
+		background-color: @selected_tab_bg;
+	}
+}
+.tabcontent {
+	display: none;
+	background: @selected_tab_bg;
+	padding: 15px;
+}
+.tabcontent.selected {
+	display: inherit;
+}
