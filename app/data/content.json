@@ -4,6 +4,22 @@
     "subtitle": "May the force be with you",
     "myname": "Najim!"
   },
+  "tabs": {
+    "tab": [
+      {
+        "tab-title": "About me",
+        "tab-content": "<p>Hey there! My name is Najim. I'm a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidently, a software developer. I am currently a Computer Science student at Plymouth University going onto my third year. I'm desperately looking to gain valuable experience in the industry.</p>"
+      },
+      {
+        "tab-title": "Photo of me",
+        "tab-content": "<p>Just look at this handsome face! If this doesn't make you want to hire me then what will? :P</p><img src=\"resources/najim-avatar.jpg\" width=\"300\" height=\"300\">"
+      },
+      {
+        "tab-title": "Links to my stuff",
+        "tab-content": "<p>Here are some projects that I've worked on:</p><ul><li><a href=\"https://github.com/iDanScott/UniSystems\">UniSystems - A vehicle loan management software package.</a><p>UniSystems provides cars to its staff for business use. Some cars are allocated to specific staff members on a long-term basis and some are kept in a pool for ad hoc use. This software package follows the MVC, Strategy, Observer and Command design patterns.</p></li><li><a href=\"https://nmazidi.github.io/Ant-Colony-CSharp\">AntColony - Simulation of the behavior of ants in a colony.</a><p>Simulation of the movements, actions and communication of a number of n ants and m robber ants. The program is built to mimic the actions of ants in real life in order to help the user gain a better understanding of the way ants forage for food.</p></li><li><a href=\"https://github.com/nmazidi/AI-Chess\">Chess - A chess games where human plays against computer.</a><p>This is a JavaScript implementation of a simple chess game where the player can play against the computer. I used a MinMax algorithm which enables the computer to make the best move possible for a certain position againts the player.</p></li><li><p>You can see my other projects on my <a href=\"https://github.com/nmazidi\">GitHub</a>.</p></li><li><p>Also check out my LinkedIn profile <a href=\"https://www.linkedin.com/in/najim-mazidi-493208116\">here</a>.</p></li></ul>"
+      }
+    ]
+  },
   "content": {
     "title": "<b>HTML</b>",
     "body": "<p><b>Hypertext Markup Language</b>, commonly referred to as <b>“HTML”</b>, is the standard markup language used to create web pages. Along with <a href=\"https://en.wikipedia.org/wiki/Cascading_Style_Sheets\">CSS</a>, & <a href=\"https://en.wikipedia.org/wiki/JavaScript\">JavaScript</a>, HTML is a cornerstone technology, used by most websites to create visually engaging web pages, user interfaces for web applications, and user interfaces for many mobile applications.</p><p>The W3C recommends several conventions to ensure an easy migration between HTML and XHTML (see <a href=\"https://www.w3.org/TR/xhtml1/#guidelines\">HTML Compatibility Guidelines</a>). The following step can be applied to XHMTL 1.0 documents only:</p><ol><li>Include both <code>xml:lang</code> and <code>lang</code> attributes on any elements assigning language.</li><li>Use the empty-element syntax only for elements specified as empty in HTML</li><li>Include an extra space in empty–element tags: for example <code>&lt;br /&gt;</code> instead of <code>&lt;br/&gt;</code>.</li><li>Include explicit close tags for elements that permit content but are left empty (for example, <code>&lt;div&gt;&lt;/div&gt;</code>, not <code>&lt;div /&gt;</code>)</li></ol><ul><li>Omit the XML declaration.</li></ul><p><b>HTML5</b> is a markup language used for structuring and presenting consent on the <a href=\"https://en.wikipedia.org/wiki/World_Wide_Web\">World Wide Web</a>. It was finalized, and published, on 28 October 3014 by the World Wide Web Consortium (W3C). This is the fifth revision of the <a href=\"https://en.wikipedia.org/wiki/HTML\">HTML</a> standard since the inception of the World Wide web.</em></p>",

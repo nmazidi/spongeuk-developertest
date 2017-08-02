@@ -35,13 +35,22 @@ jQuery(
 			};
 
 			/**
+			* Populate the tabs
+			*/
+			var populateTabs = function() {
+				var strTabsSource = $( '#tabs-template' ).html(),
+						resTabsTemplate = Handlebars.compile( strTabsSource ),
+						strTabsHTML = resTabsTemplate( resContent.getItem( 'tabs' ) );
+				$( '#tabs' ).append( strTabsHTML );
+			};
+
+			/**
 			 * Populate the tasks
 			 */
 			var populateTasks = function() {
 				var strTaskSource = $( '#task-template' ).html(),
 						resTasksTemplate = Handlebars.compile( strTaskSource ),
 						strTasksHTML = resTasksTemplate( resContent.getItem( 'tasks' ) );
-
 				$( '#tasks' ).append( strTasksHTML );
 			};
 
@@ -68,6 +77,27 @@ jQuery(
 			};
 
 			/**
+			 * Show tab content for the tab that has the 'selected' class, and vice versa
+			 */
+			 var setSelectedTab = function() {
+				 //set default selected tab
+				 $("#"+"tab0").addClass('selected');
+				 $("[name='tab0']").addClass('selected');
+
+				 $("div.tab button").click(function() {
+					 var tabName = $(this).attr('name');
+
+					 //deselect all tabs first
+					 $('div.tab button').removeClass('selected');
+					 $('.tabcontent').removeClass('selected');
+
+					 //then select clicked tab
+					 $(this).addClass('selected');
+					 $("#"+tabName).addClass('selected');
+				 });
+			 };
+
+			/**
 			 * Register a Handlebars helper for the difficulty stars
 			 */
 			Handlebars.registerHelper( 'difficulty',
@@ -86,25 +116,13 @@ jQuery(
 					}
 			);
 			/**
-			 * About me Tabs
-			 */
-			 $('div.tab button').click(function(){
-				 var tabName = $(this).attr('name');
-
-				 //deselect all tabs first
-				 $('div.tab button').removeClass('selected');
-				 $('.tabcontent').removeClass('selected');
-
-				 //then select clicked tab
-				 $(this).addClass('selected');
-				 $("#"+tabName).addClass('selected');
-			 })
-			/**
 			 * When the content file is ready, actually populate the content
 			 */
 			resContent.onReady(
 					function() {
 						populateHeader();
+						populateTabs();
+						setSelectedTab();
 						populateTasks();
 						populateContent();
 						populateDocumentation();
