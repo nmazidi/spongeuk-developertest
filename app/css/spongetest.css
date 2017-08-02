@@ -34,7 +34,7 @@ body {
 #header {
   padding-top: 60px;
   padding-bottom: 45px;
-  color: #FFF;
+  color: white;
 }
 #header img {
   margin-right: auto;
@@ -43,7 +43,7 @@ body {
   display: block;
 }
 #header h1 {
-  color: #FFF;
+  color: white;
 }
 #header h1 + p {
   font-size: 1.8em;
@@ -98,7 +98,7 @@ body {
   padding-top: 30px;
   padding-bottom: 10px;
   position: relative;
-  color: #FFF;
+  color: white;
   background-color: #212D35;
   z-index: 2;
 }
@@ -168,13 +168,60 @@ strong {
   font-weight: 500;
 }
 #boxes {
+  position: relative;
   padding: 40px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#boxes:after {
+  content: 'Wrapper';
+  font-size: 1.5em;
+  color: white;
+  font-family: "Roboto", serif;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  padding: 10px;
+  background-color: inherit;
 }
 #box-left {
-  height: 50px;
+  display: inline-block;
+  min-height: 50px;
+  max-height: 50px;
+  vertical-align: middle;
+  position: relative;
+  width: 50%;
+  max-width: 210px;
+  align-self: center;
+}
+#box-left:after {
+  content: 'Left';
+  font-size: 1.5em;
+  color: white;
+  font-family: "Roboto", serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 #box-right {
-  height: 50px;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  min-height: 100%;
+  vertical-align: middle;
+  padding-bottom: 50%;
+  position: relative;
+}
+#box-right:after {
+  content: 'Right';
+  font-size: 1.5em;
+  color: white;
+  font-family: "Roboto", serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 div.tab {
   margin: 0px;
