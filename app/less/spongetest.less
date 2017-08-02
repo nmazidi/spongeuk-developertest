@@ -33,12 +33,16 @@
 
 @robotoSerif: "Roboto", serif;
 @robotoMono: "Roboto Mono", monospace;
+@fontsize-smalldevice: 125%;
 
 body {
 	min-width: 320px;
 	font-family: @robotoSerif;
 	color: @body_font_colour;
 	font-weight: 300;
+	@media screen and (max-width: 499px) {
+		font-size: @fontsize-smalldevice;
+	}
 }
 #header-wrapper {
 	position: relative;
