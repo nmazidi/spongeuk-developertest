@@ -58,6 +58,18 @@
 				this.getItem = function( intItem ) {
 					return objContent[intItem];
 				};
+				/**
+				* A better approach for populating content
+				* instead of having a function for each section,
+				* only one function needed that takes an input of the name of the content section to populate
+				*/
+				this.populate = function(contentSection) {
+					var strSource = $( '#'+contentSection+'-template' ).html(),
+							resTemplate = Handlebars.compile( strSource ),
+							strHTML = resTemplate( this.getItem( contentSection ) );
+
+					$( '#'+contentSection ).html( strHTML );
+				};
 
 				return this;
 			};

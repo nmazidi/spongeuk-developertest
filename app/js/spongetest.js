@@ -23,58 +23,6 @@ jQuery(
 			 */
 			var resContent = new Content( 'app/data/content.json' );
 
-			/**
-			 * Populate the header
-			 */
-			var populateHeader = function() {
-				var strHeaderSource = $( '#header-template' ).html(),
-						resHeaderTemplate = Handlebars.compile( strHeaderSource ),
-						strHeaderHTML = resHeaderTemplate( resContent.getItem( 'header' ) );
-
-				$( '#header' ).html( strHeaderHTML );
-			};
-
-			/**
-			* Populate the tabs
-			*/
-			var populateTabs = function() {
-				var strTabsSource = $( '#tabs-template' ).html(),
-						resTabsTemplate = Handlebars.compile( strTabsSource ),
-						strTabsHTML = resTabsTemplate( resContent.getItem( 'tabs' ) );
-				$( '#tabs' ).append( strTabsHTML );
-			};
-
-			/**
-			 * Populate the tasks
-			 */
-			var populateTasks = function() {
-				var strTaskSource = $( '#task-template' ).html(),
-						resTasksTemplate = Handlebars.compile( strTaskSource ),
-						strTasksHTML = resTasksTemplate( resContent.getItem( 'tasks' ) );
-				$( '#tasks' ).append( strTasksHTML );
-			};
-
-			/**
-			 * Populate the content
-			 */
-			var populateContent = function() {
-				var strContentSource = $( '#content-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'content' ) );
-
-				$( '#content' ).append( strContentHTML );
-			};
-
-			/**
-			 * Populate the documentation links
-			 */
-			var populateDocumentation = function() {
-				var strContentSource = $( '#documentation-template' ).html(),
-						resContentTemplate = Handlebars.compile( strContentSource ),
-						strContentHTML = resContentTemplate( resContent.getItem( 'docs' ) );
-
-				$( '#documentation' ).append( strContentHTML );
-			};
 
 			/**
 			 * Show tab content for the tab that has the 'selected' class, and vice versa
@@ -120,12 +68,13 @@ jQuery(
 			 */
 			resContent.onReady(
 					function() {
-						populateHeader();
-						populateTabs();
+						//call populate function in content.js
+						resContent.populate("header");
+						resContent.populate("tabs");
+						resContent.populate("tasks");
+						resContent.populate("content");
+						resContent.populate("documentation");
 						setSelectedTab();
-						populateTasks();
-						populateContent();
-						populateDocumentation();
 					}
 			);
 		}
