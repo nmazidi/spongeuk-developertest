@@ -10,7 +10,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "css/spongetest.css": "app/less/spongetest.less"
+          "app/css/spongetest.css": "app/less/spongetest.less"
         }
       }
     },
