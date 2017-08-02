@@ -15,14 +15,15 @@
  Page-specific JS
 =====================================================
 */
-
+//import ContentES6 from './lib/ContentES6';
 jQuery(
+
 		function( $ ) {
+
 			/**
 			 * A new instance of the content parser using the content JSON file
 			 */
 			var resContent = new Content( 'app/data/content.json' );
-
 
 			/**
 			 * Show tab content for the tab that has the 'selected' class, and vice versa
